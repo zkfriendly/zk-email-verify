@@ -1,6 +1,26 @@
 {
-  "name": "utils",
-  "private": true,
+  "name": "zkemail_rust-verifier",
+  "private": false,
   "version": "1.0.0",
-  "description": "utilities to generating bindings for various proving contexts"
+  "description": "CLI tool to generate arkworks gorth16 verifier based on SNARKJS artifacts",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "rust-verifier": "./cli.js"
+  },
+  "scripts": {
+    "install": "node build.js",
+    "prepublishOnly": "cargo build --release"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "build.js",
+    "src",
+    "Cargo.toml",
+    "Cargo.lock"
+  ],
+  "dependencies": {
+    "node-gyp": "10.1.0"
+  }
 }

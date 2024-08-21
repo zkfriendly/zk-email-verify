@@ -3,6 +3,10 @@ name = "utils"
 version = "0.1.0"
 edition = "2021"
 
+[[bin]]
+name = "rust-verifier"
+path = "src/main.rs"
+
 [dependencies]
 ark-circom = { git = "https://github.com/gakonst/ark-circom.git", rev = "170b10fc9ed182b5f72ecf379033dda023d0bf07" }
 ark-crypto-primitives = { version = "=0.4.0" }

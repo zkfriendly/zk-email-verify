@@ -2,6 +2,12 @@
 
 This is a mini CLI tool for exporting Rust verifiers from snarkjs artifacts. It allows you to generate a verifier from a snarkjs verifying key and generate verifier arguments from snarkjs proof and public inputs.
 
+## Install
+
+```bash
+npm i -g zkemail_rust-verifier
+```
+
 ## Usage
 
 ### Commands
@@ -16,13 +22,13 @@ This is a mini CLI tool for exporting Rust verifiers from snarkjs artifacts. It 
 To generate a verifier from a snarkjs verifying key, use the `generate-verifier` command:
 
 ```sh
-cargo run -- generate-verifier -v <path_to_verifying_key_file> -o <output_file_path>
+rust-verifier generate-verifier -v <path_to_verifying_key_file> -o <output_file_path>
 ```
 
 **Example:**
 
 ```sh
-cargo run -- generate-verifier -v tests/data/proof_of_twitter/vkey.json -o verifier.rs
+rust-verifier generate-verifier -v tests/data/proof_of_twitter/vkey.json -o verifier.rs
 ```
 
 #### Generate Verifier Arguments
@@ -30,11 +36,11 @@ cargo run -- generate-verifier -v tests/data/proof_of_twitter/vkey.json -o verif
 To generate verifier arguments from snarkjs proof and public inputs, use the `generate-verifier-arguments` command:
 
 ```sh
-cargo run -- generate-verifier-arguments -p <path_to_proof_file> -i <path_to_public_inputs_file>
+rust-verifier generate-verifier-arguments -p <path_to_proof_file> -i <path_to_public_inputs_file>
 ```
 
 **Example:**
 
 ```sh
-cargo run -- generate-verifier-arguments -p tests/data/proof_of_twitter/proof.json -i tests/data/proof_of_twitter/public.json
+rust-verifier generate-verifier-arguments -p tests/data/proof_of_twitter/proof.json -i tests/data/proof_of_twitter/public.json
 ```
